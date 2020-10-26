@@ -11,7 +11,6 @@ import androidx.navigation.Navigation;
 
 import id.ac.polinema.skor.R;
 import id.ac.polinema.skor.databinding.FragmentGoalBinding;
-
 import id.ac.polinema.skor.models.GoalScorer;
 
 /**
@@ -37,7 +36,8 @@ public class GoalFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
-		FragmentGoalBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_goal, container, false);
+		binding = DataBindingUtil.inflate(inflater, R.layout.fragment_goal,
+				container, false);
 		binding.setFragment(this);
 		binding.setGoalScorer(goalScorer);
 		requestKey = GoalFragmentArgs.fromBundle(getArguments()).getRequestKey();
